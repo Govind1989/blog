@@ -1,0 +1,28 @@
+
+<% content_for :page_title, "Home"%>
+
+<section class = 'section'>
+	<div class = 'container'>
+		
+		<%@posts.each do |post|%>
+		<div class = 'column'  style="display: grid;grid-gap: 1em;">
+			<div class = 'card-content'>
+				<div class = 'media'>
+				<div style = "overflow:hidden" class = 'media-content'>
+					<p style="font-size:22px;" class = 'title'><%= link_to post.title, post%></p>
+				</div>
+			</div>
+			<div style = 'overflow: hidden;' class = 'content'><%=post.description%>
+				
+			</div>
+			
+			</div>
+		</div>
+
+		<%end%>
+	</div>
+</section>
+
+
+
+  
